@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AgenticWeb3 2027 is a proposed workshop at FSE 2027 on software engineering for autonomous AI agents and decentralized systems.">
+  <meta name="theme-color" content="#7d303b">
+  <title>AgenticWeb3 2027 | Proposed Workshop at FSE 2027</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%237d303b'/%3E%3Ctext x='24' y='33' text-anchor='middle' font-family='Georgia' font-size='32' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#242c35;--muted:#606671;--accent:#7d303b;--line:#deddd8;--paper:#fffefa;--tint:#f6f3ec;--max:1100px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:24px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-underline-offset:4px;text-decoration-thickness:1px}
+    a:hover{text-decoration-thickness:2px}
+    a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}
+    .wrap{width:min(var(--max),calc(100% - 64px));margin-inline:auto}
+    .skip{position:absolute;left:20px;top:-80px;background:white;padding:10px 16px;z-index:2}
+    .skip:focus{top:8px}
+    header{border-top:5px solid var(--accent);border-bottom:1px solid var(--line)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:78px;padding-block:15px}
+    .brand{font-weight:750;text-decoration:none;letter-spacing:-.4px;color:var(--ink);white-space:nowrap}
+    .brand span{font-weight:400;color:var(--muted);margin-left:5px}
+    nav{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px}
+    nav a{color:var(--ink);text-decoration:none}
+    nav a:hover{text-decoration:underline}
+    .intro{padding-top:65px;padding-bottom:54px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:700;color:var(--accent);margin:0 0 15px}
+    h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.15;letter-spacing:-.025em}
+    h1{font-size:clamp(42px,5.8vw,67px);margin:0 0 15px}
+    .fullname{font-family:Georgia,"Times New Roman",serif;font-size:clamp(21px,2.5vw,28px);line-height:1.4;margin:0;max-width:850px}
+    .status{margin:28px 0 0;border-left:3px solid var(--accent);padding:10px 16px;background:var(--tint);font-size:14px;color:#4e535b;max-width:850px}
+    .intro-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:64px;margin-top:40px;align-items:start}
+    .about-copy p{margin:0 0 20px}
+    .directions{margin:22px 0}
+    .directions div{margin-bottom:18px}
+    .directions dt{font-weight:700;color:var(--accent)}
+    .directions dd{margin:4px 0 0}
+    .dates{border-top:2px solid var(--ink);padding-top:15px}
+    .dates h2{font-family:inherit;font-size:18px;font-weight:700;letter-spacing:0;margin:0 0 15px}
+    .dates dl{margin:0}
+    .dates dl div{padding:11px 0;border-bottom:1px solid var(--line)}
+    .dates dt{font-size:13px;color:var(--muted)}
+    .dates dd{font-size:17px;font-weight:650;margin:2px 0 0;font-variant-numeric:tabular-nums}
+    .dates small{font-size:12px;font-weight:400;color:var(--muted)}
+    .small{font-size:13px;color:var(--muted);line-height:1.6}
+    .dates .small{margin:14px 0}
+    section.section{padding:44px 0;border-top:1px solid var(--line)}
+    h2{font-size:35px;margin:0 0 18px}
+    h3{font-size:16px;line-height:1.45;margin:0 0 10px;font-weight:700}
+    .lede{max-width:850px;margin:0 0 26px;color:var(--muted)}
+    .topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 52px}
+    .topic-group h3{padding-bottom:9px;border-bottom:1px solid var(--line);color:var(--accent)}
+    ul{padding-left:20px;margin:0}
+    li{padding-left:2px;margin-bottom:5px}
+    .topic-group ul{font-size:14px;line-height:1.7}
+    .two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+    .two-col p{margin:0 0 18px}
+    .key-facts{display:flex;flex-wrap:wrap;gap:10px 24px;padding:14px 0;margin-bottom:26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}
+    .key-facts strong{color:var(--accent)}
+    .policy{margin:18px 0 0;font-size:13px;color:var(--muted)}
+    .program{list-style:none;padding:0;counter-reset:session}
+    .program li{counter-increment:session;display:grid;grid-template-columns:35px 1fr;gap:14px;padding:15px 0;margin:0;border-bottom:1px solid var(--line)}
+    .program li::before{content:counter(session,decimal-leading-zero);font-size:13px;color:var(--accent);padding-top:2px;font-variant-numeric:tabular-nums}
+    .program strong{display:block;font-size:16px}
+    .program p{margin:3px 0 0;font-size:14px;color:var(--muted)}
+    .people{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px}
+    .people li{margin:0;padding:0}
+    .people strong{display:block;font-size:16px;font-weight:650}
+    .people span{display:block;font-size:14px;color:var(--muted);line-height:1.6;margin-top:3px}
+    .people .contact-label{font-size:12px;color:var(--accent);margin-top:5px}
+    .pc{gap:20px 48px}
+    .pc strong{font-size:15px}
+    .pc span{font-size:13px}
+    .contact-section{background:var(--tint);border-top:1px solid var(--line);padding:32px 0}
+    .contact-row{display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .contact-row h2{font-size:26px;margin-bottom:7px}
+    .contact-row p{margin:0;font-size:14px}
+    footer{padding:22px 0;color:var(--muted);font-size:12px}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:850px){.nav{align-items:flex-start;flex-direction:column;gap:12px}.intro-grid{grid-template-columns:minmax(0,1fr) 255px;gap:32px}.topic-grid,.two-col,.people{column-gap:30px}}
+    @media(max-width:640px){.wrap{width:calc(100% - 36px)}.intro{padding-top:38px;padding-bottom:32px}h1{font-size:42px}.fullname{font-size:22px}.intro-grid{grid-template-columns:1fr;gap:26px;margin-top:28px}.dates{max-width:none}.dates dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}.dates dd{font-size:16px}nav{gap:8px 18px;font-size:13px}.topic-grid,.two-col,.people{grid-template-columns:1fr}.topic-grid{gap:25px}.two-col{gap:8px}section.section{padding:34px 0}h2{font-size:30px}.contact-row{display:block}.contact-row>a{display:inline-block;margin-top:14px}.people{gap:20px}.status{font-size:13px}.key-facts{gap:7px 18px}.contact-section{padding:28px 0}footer .wrap{display:block}footer a{display:inline-block;margin-top:5px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body{font-size:11pt;background:white}.wrap{width:100%}header nav,.skip,footer{display:none}.intro{padding-top:25px}.intro-grid{grid-template-columns:1fr 230px;gap:30px}.topic-group,.people li{break-inside:avoid}section.section{padding:25px 0}a{color:inherit}h1{font-size:38pt}.status{background:none}.contact-section{background:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#main">AgenticWeb3 <span>2027</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#topics">Topics</a><a href="#submissions">Submissions</a><a href="#program">Program</a><a href="#organizers">People</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <section class="intro" id="about" aria-labelledby="title">
+        <p class="eyebrow">Proposed workshop at FSE 2027</p>
+        <h1 id="title">AgenticWeb3 2027</h1>
+        <p class="fullname">The 1st International Workshop on Agentic Web3</p>
+        <p class="status"><strong>Proposal stage.</strong> This is a proposal for a workshop at FSE 2027. Workshop acceptance is not yet confirmed, and the dates, program, and committee are provisional. Submissions are not yet open.</p>
+        <div class="intro-grid">
+          <div class="about-copy">
+            <p><strong>Agentic Web3</strong> integrates autonomous AI agents with decentralized software and infrastructure. The workshop brings together researchers and practitioners to advance software engineering across two complementary directions.</p>
+            <dl class="directions">
+              <div><dt>Agents for Web3</dt><dd>Using agents to develop, test, analyze, maintain, and operate smart contracts and decentralized applications.</dd></div>
+              <div><dt>Web3 for Agents</dt><dd>Using decentralized mechanisms to support agent identity, authorization, coordination, trust, and economic interactions.</dd></div>
+            </dl>
+            <p>Both directions raise engineering questions across the software lifecycle. We aim to identify requirements and failure modes, compare methods and deployment evidence, and encourage reproducible evaluation and collaboration between academia and industry.</p>
+          </div>
+          <aside class="dates" aria-labelledby="dates-title">
+            <h2 id="dates-title">Proposed dates</h2>
+            <dl>
+              <div><dt>Extended-abstract submission</dt><dd><time datetime="2027-02-11">11 February 2027</time></dd></div>
+              <div><dt>Author notification</dt><dd><time datetime="2027-03-18">18 March 2027</time></dd></div>
+              <div><dt>Camera-ready · FSE hard deadline</dt><dd><time datetime="2027-04-08">8 April 2027</time></dd></div>
+              <div><dt>Workshop</dt><dd>To be allocated by FSE</dd></div>
+            </dl>
+            <p class="small">Submission and camera-ready deadlines: 23:59:59 Anywhere on Earth (AoE, UTC−12).</p>
+            <a class="small" href="https://conf.researchr.org/track/fse-2027/fse-2027-workshops">FSE 2027 workshop information ↗</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="topics" aria-labelledby="topics-title">
+        <h2 id="topics-title">Topics of interest</h2>
+        <p class="lede">We welcome contributions across both directions, from construction and integration to assurance, operation, and evaluation. Each submission should identify its concrete connection to agents and Web3. Topics include, but are not limited to, the following.</p>
+        <div class="topic-grid"><div class="topic-group"><h3>Requirements and construction</h3><ul><li>Requirements engineering for agent and Web3 interactions.</li><li>Agent-assisted development of contracts and Web3 applications.</li><li>Planning and synthesis of agent workflows using Web3 services.</li><li>Human oversight and approval of on-chain agent actions.</li></ul></div>
+<div class="topic-group"><h3>Architecture and interoperability</h3><ul><li>Architectures for agents and decentralized infrastructure.</li><li>Agent framework, protocol, wallet, and tool interoperability.</li><li>Coordination across agents, chains, and off-chain services.</li><li>Decentralized compute and storage for agent workloads.</li></ul></div>
+<div class="topic-group"><h3>Identity, authorization, and trust</h3><ul><li>Decentralized agent identity, discovery, and authentication.</li><li>Authorization and delegation in agent workflows.</li><li>Trust and reputation mechanisms for agent collaboration.</li><li>Verifiable computation and attestation for agent services.</li></ul></div>
+<div class="topic-group"><h3>Economic coordination and governance</h3><ul><li>Contracting and incentive mechanisms in agent service markets.</li><li>Autonomous payments and resource budgeting for agents.</li><li>Service delivery verification, settlement, and dispute resolution.</li><li>Agent participation in decentralized governance.</li></ul></div>
+<div class="topic-group"><h3>Security and privacy</h3><ul><li>Security of agent inputs, tools, and software supply chains.</li><li>Wallet and key security in Web3 systems operated by agents.</li><li>Secure communication and transactions among agents.</li><li>Privacy-preserving agent collaboration and accountability.</li><li>Provenance and integrity of agent models and data.</li></ul></div>
+<div class="topic-group"><h3>Testing and experimentation</h3><ul><li>Agent-assisted testing of contracts and blockchain systems.</li><li>Testing and fuzzing of integrated agent and Web3 systems.</li><li>Test oracles for nondeterministic and stateful agent behavior.</li><li>Fault injection and reproducible experiments for agent workflows.</li></ul></div>
+<div class="topic-group"><h3>Analysis and verification</h3><ul><li>Agent-assisted program analysis and smart-contract auditing.</li><li>Static and dynamic analysis of Agentic Web3 systems.</li><li>Security analysis of information and authority flows.</li><li>Verifying safety and liveness across agents and contracts.</li><li>Validation of agent-generated Web3 software and actions.</li></ul></div>
+<div class="topic-group"><h3>Runtime monitoring and recovery</h3><ul><li>Runtime policy enforcement for autonomous Web3 actions.</li><li>Observability and causal tracing of distributed agent execution.</li><li>Failure attribution and accountability in agent workflows.</li><li>Fault tolerance and recovery for partially completed workflows.</li></ul></div>
+<div class="topic-group"><h3>Maintenance and evolution</h3><ul><li>Agent-assisted debugging and repair of decentralized software.</li><li>Compatibility and regressions after protocol or API updates.</li><li>Migration and evolution of integrated agent and Web3 systems.</li><li>Lifecycle management of agent tools and dependencies.</li></ul></div>
+<div class="topic-group"><h3>Evaluation and human interaction</h3><ul><li>Benchmarks and empirical studies of Agentic Web3 systems.</li><li>Performance, cost, and scalability of agent workflows.</li><li>Comparing decentralized, centralized, and federated designs.</li><li>Usability and user understanding of Agentic Web3 systems.</li></ul></div></div>
+      </section>
+
+      <section class="section" id="submissions" aria-labelledby="submissions-title">
+        <h2 id="submissions-title">Submission information</h2>
+        <p class="lede">The proposed workshop welcomes research contributions and tool demonstrations from academia and industry. Submission instructions and the submission link will be announced after workshop acceptance.</p>
+        <div class="key-facts"><span><strong>2–5 pages</strong> including references and appendices</span><span><strong>Extended abstracts</strong> for both contribution types</span><span><strong>Single-anonymous</strong> review</span></div>
+        <div class="two-col">
+          <div>
+            <h3>Research contributions</h3>
+            <p>Submissions should explain a concrete engineering problem, its connection to Agentic Web3, the proposed approach, and evidence supporting the claims. Evaluation will consider relevance, methodological appropriateness, clarity, and potential to stimulate discussion.</p>
+            <h3>Tool demonstrations</h3>
+            <p>Describe the engineering problem, key capabilities, current implementation, and a concrete demonstration scenario. Links to an accessible artifact or short video are encouraged. Review will also consider practical usefulness, evidence of a working implementation, and the feasibility of the demonstration.</p>
+          </div>
+          <div>
+            <h3>Review and planned publication</h3>
+            <p>Each submission will receive at least three conflict-free PC reviews. Research contributions and tool demonstrations will share one archival category: extended abstracts. Subject to workshop acceptance, the publication plan is to include accepted contributions in the ACM Digital Library as extended abstracts, which the FSE 2027 workshop call identifies as exempt from article processing charges.</p>
+            <h3>Presentation and participation</h3>
+            <p>At least one author of each accepted contribution must register and present in person. Tool demonstration authors will also demonstrate their tools. Attendance will be open to registered participants without an accepted contribution.</p>
+          </div>
+        </div>
+        <p class="policy">Submission eligibility and conflicts will follow <a href="https://www2.sigsoft.org/policies/pcpolicy/">SIGSOFT policy</a>. Organizers and their directly supervised students, postdoctoral researchers, and employees may not submit. The final call for papers will include the required ACM publication-policy notice, including the policy on research involving human participants.</p>
+      </section>
+
+      <section class="section" id="program" aria-labelledby="program-title">
+        <h2 id="program-title">Planned program</h2>
+        <p class="lede">A one-day, in-person workshop with invited talks, contributed presentations, and academic and industrial tool demonstrations. The detailed schedule and speakers will be announced after acceptance.</p>
+        <ol class="program">
+          <li><div><strong>Opening and invited talks</strong><p>An introduction to the workshop and one or two invited talks on research challenges and practical experience.</p></div></li>
+          <li><div><strong>Agents for Web3</strong><p>Research on developing, testing, and operating decentralized software with agents.</p></div></li>
+          <li><div><strong>Web3 for Agents</strong><p>Research on decentralized support for agent collaboration and economic interaction.</p></div></li>
+          <li><div><strong>Demonstration session</strong><p>Working tools from academia and industry, with concrete workflows and discussion of capabilities, limitations, and practical use.</p></div></li>
+        </ol>
+        <p class="small">Questions and discussion will be integrated throughout the sessions to connect findings and identify open problems.</p>
+      </section>
+
+      <section class="section" id="organizers" aria-labelledby="organizers-title">
+        <h2 id="organizers-title">Organizers</h2>
+        <ul class="people">
+          <li><strong>Ningyu He</strong><span>The Hong Kong Polytechnic University</span><span class="contact-label">Main contact</span></li>
+          <li><strong>Haoyu Wang</strong><span>Huazhong University of Science and Technology</span></li>
+          <li><strong>Chiachih Wu</strong><span>Amber Group</span></li>
+          <li><strong>Yajin Zhou</strong><span>The Chinese University of Hong Kong &amp; BlockSec</span></li>
+        </ul>
+      </section>
+
+      <section class="section" id="committee" aria-labelledby="committee-title">
+        <h2 id="committee-title">Proposed program committee</h2>
+        <p class="lede">Membership is provisional. Listed alphabetically by surname.</p>
+        <ul class="people pc"><li><strong>Guangdong Bai</strong><span>City University of Hong Kong</span></li><li><strong>Jiachi Chen</strong><span>Zhejiang University</span></li><li><strong>John Grundy</strong><span>Monash University</span></li><li><strong>Muhui Jiang</strong><span>BlockSec</span></li><li><strong>Yepang Liu</strong><span>Southern University of Science and Technology</span></li><li><strong>David Lo</strong><span>Singapore Management University</span></li><li><strong>Kangjie Lu</strong><span>University of Minnesota, Twin Cities</span></li><li><strong>Qinghua Lu</strong><span>CSIRO</span></li><li><strong>Xiapu Daniel Luo</strong><span>The Hong Kong Polytechnic University</span></li><li><strong>Kailong Wang</strong><span>National University of Singapore</span></li><li><strong>Shuai Wang</strong><span>The Hong Kong University of Science and Technology</span></li><li><strong>Lei Wu</strong><span>Zhejiang University &amp; BlockSec</span></li><li><strong>Xiwei (Sherry) Xu</strong><span>CSIRO&#x27;s Data61</span></li><li><strong>Ting Yu</strong><span>Mohamed bin Zayed University of Artificial Intelligence</span></li><li><strong>Xingliang Yuan</strong><span>The University of Melbourne</span></li><li><strong>Mu Zhang</strong><span>University of Utah</span></li></ul>
+      </section>
+    </div>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-row">
+        <div><h2 id="contact-title">Contact</h2><p>For questions about the workshop, please contact Ningyu He.</p></div>
+        <a href="mailto:ningyhe@polyu.edu.hk">ningyhe@polyu.edu.hk</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>AgenticWeb3 2027 · Workshop proposal</span><a href="#main">Back to top ↑</a></div></footer>
+</body>
+</html>
